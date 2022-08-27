@@ -24,16 +24,16 @@ struct Flow {
 }
 
 extension Flow: Identifiable {
-    static let heavy = Flow(id: 1, name: "heavy", icon: UIImage(named: "heavy"))
-    static let medium = Flow(id: 2, name: "medium", icon: UIImage(named: "medium"))
     static let light = Flow(id: 3, name: "light", icon: UIImage(named: "light"))
+    static let medium = Flow(id: 2, name: "medium", icon: UIImage(named: "medium"))
+    static let heavy = Flow(id: 1, name: "heavy", icon: UIImage(named: "heavy"))
 }
 
 extension Flow {
-    static let flowypes : [Flow] = [
-        .heavy,
+    static let flowTypes : [Flow] = [
+        .light,
         .medium,
-        .light
+        .heavy
     ]
 }
 

@@ -10,6 +10,10 @@ import SwiftUI
 struct HomeView: View {
     @StateObject var weekModel: WeekViewModel = WeekViewModel()
     @Namespace var animation
+    @State var text = ""
+    @State var buttonPressed = false
+
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -30,7 +34,22 @@ struct HomeView: View {
                 .padding(30)
                 .ignoresSafeArea()
                 
-                Image("heart 1")
+                ZStack {
+                    Image("heart 1")
+                        .padding(.leading, 20)
+                    VStack {
+                        Text(buttonPressed ? "Welcome to" : "Period:")
+                            .bold()
+                            .font(.system(size: 20, weight: .bold))
+
+                        Text(buttonPressed ? "Periodt." : "Day 1")
+                            .font(.system(size: 40, weight: .bold))
+                            .bold()
+                    }
+                    .padding(.bottom, 50)
+                    .foregroundColor(.white)
+
+                }
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
@@ -103,7 +122,31 @@ struct HomeView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.top, 30)
+                
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(Flow.flowTypes) { flowType in
+                            Button(action: {
+                                buttonPressed = true
+                            }) {
+                                Image(uiImage: flowType.icon ?? UIImage(contentsOfFile: "frustrated")!)
+                            }
 
+                        }
+                    }
+                }
+                
+                Text("Symptoms")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 30)
+                
+                TextField("Notes", text: $text)
+                    .padding()
+                    .frame(height: 100, alignment: .topTrailing)
+                    .background(Color.gray.opacity(0.1))
+                    
 
             }
             .padding(20)
