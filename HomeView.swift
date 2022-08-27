@@ -81,8 +81,33 @@ struct HomeView: View {
             }
             .background(Color.background)
             
-                        
-            
+            VStack {
+                Text("Mood")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack {
+                        ForEach(Mood.moods) { mood in
+                            Button(action: {
+                                print("button pressed")
+                            }) {
+                                Image(uiImage: mood.icon ?? UIImage(contentsOfFile: "frustrated")!)
+                            }
+
+                        }
+                    }
+                }
+                
+                Text("Flow")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 30)
+
+
+            }
+            .padding(20)
+
         }
     }
 }
