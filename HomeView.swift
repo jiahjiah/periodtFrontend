@@ -23,14 +23,14 @@ struct HomeView: View {
                 
                 VStack {
                     HStack { Spacer() }
-                    Text("Welcome")
+                    Text("Welcome,")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .font(.subheadline)
 
-                    Text("Jia Huang")
+                    Text("Jia Huang 💜")
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .font(.subheadline)
+                        .font(.headline)
                         .padding(.top, 1)
                 }
                 .padding(30)
@@ -39,12 +39,16 @@ struct HomeView: View {
                 ZStack {
                     Image("heart 1")
                         .padding(.leading, 20)
+                    
+                    Image("draw")
+                        .padding(.leading, 250)
+                        .padding(.bottom, 200)
                     VStack {
-                        Text(buttonPressed ? "Welcome to" : "Period:")
+                        Text(buttonPressed ? "Period:" : "Welcome to")
                             .bold()
                             .font(.system(size: 20, weight: .bold))
 
-                        Text(buttonPressed ? "Periodt." : "Day 1")
+                        Text(buttonPressed ? "Day 1" : "Periodt.")
                             .font(.system(size: 40, weight: .bold))
                             .bold()
                     }
@@ -52,6 +56,9 @@ struct HomeView: View {
                     .foregroundColor(.white)
 
                 }
+                .edgesIgnoringSafeArea(.top)
+                
+                Image("month")
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
@@ -157,9 +164,13 @@ struct HomeView: View {
                 }
             }
             .padding(20)
+            .edgesIgnoringSafeArea(.top)
+
 
         }
         .statusBar(hidden: true)
+        .edgesIgnoringSafeArea(.top)
+
 
     }
 }

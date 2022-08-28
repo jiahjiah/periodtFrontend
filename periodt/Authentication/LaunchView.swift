@@ -14,6 +14,8 @@ struct LaunchView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
+
             
             VStack {
                 Spacer()
