@@ -17,6 +17,8 @@ struct StatsView: View {
                 .font(.title)
                 .padding(.top, 20)
                 .padding(.leading, 20)
+                .padding(.top, 50)
+
             HStack {
                 //rect 1
                 VStack {
@@ -94,6 +96,8 @@ struct StatsView: View {
             
             Spacer()
         }
+        .ignoresSafeArea()
+        .edgesIgnoringSafeArea(.top)
     }
 }
 

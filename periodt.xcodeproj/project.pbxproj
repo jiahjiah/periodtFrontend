@@ -13,6 +13,8 @@
 		AF97107528BAD7640032C126 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = AF97107428BAD7640032C126 /* FirebaseStorage */; };
 		AF97107828BAE34B0032C126 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AF97107728BAE34B0032C126 /* FirebaseAnalytics */; };
 		AF97107A28BAE34B0032C126 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF97107928BAE34B0032C126 /* FirebaseAnalyticsSwift */; };
+		AF97107C28BAFA5D0032C126 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97107B28BAFA5D0032C126 /* ArticleModel.swift */; };
+		AF97108228BB00690032C126 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF97108128BB00690032C126 /* CardModel.swift */; };
 		AFE4D29428BA5DA200AED07D /* periodtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D29328BA5DA200AED07D /* periodtApp.swift */; };
 		AFE4D29628BA5DA200AED07D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4D29528BA5DA200AED07D /* ContentView.swift */; };
 		AFE4D29828BA5DA600AED07D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE4D29728BA5DA600AED07D /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF97107B28BAFA5D0032C126 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		AF97108128BB00690032C126 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		AFE4D29028BA5DA200AED07D /* periodt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = periodt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE4D29328BA5DA200AED07D /* periodtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = periodtApp.swift; sourceTree = "<group>"; };
 		AFE4D29528BA5DA200AED07D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				AFE4D2A128BA615800AED07D /* RoundedShape.swift */,
+				AF97108128BB00690032C126 /* CardModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 			children = (
 				AFE4D2A628BA61AD00AED07D /* Date.swift */,
 				AFE4D2B028BA7B5F00AED07D /* WeekViewModel.swift */,
+				AF97107B28BAFA5D0032C126 /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -243,7 +249,9 @@
 				AFE4D2C028BAB39B00AED07D /* LoginView.swift in Sources */,
 				AFE4D2A728BA61AD00AED07D /* Date.swift in Sources */,
 				AFE4D2C428BAC10800AED07D /* AuthViewModel.swift in Sources */,
+				AF97107C28BAFA5D0032C126 /* ArticleModel.swift in Sources */,
 				AFE4D2BA28BAAE9600AED07D /* ArticleView.swift in Sources */,
+				AF97108228BB00690032C126 /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

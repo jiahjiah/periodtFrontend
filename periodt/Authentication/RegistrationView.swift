@@ -35,6 +35,10 @@ struct RegistrationView: View {
                         .frame(width: 320)
                         .background(Color.gray.opacity(0.1))
                         .overlay(RoundedRectangle(cornerRadius: 30).stroke(.white, lineWidth: 10))
+                        .disableAutocorrection(true)
+                        .autocapitalization(.none)
+
+
 
 
                     TextField("Email address", text: $email)
@@ -42,6 +46,8 @@ struct RegistrationView: View {
                         .frame(width: 320)
                         .background(Color.gray.opacity(0.1))
                         .overlay(RoundedRectangle(cornerRadius: 30).stroke(.white, lineWidth: 10))
+                        .disableAutocorrection(true)
+
 
 
                     SecureField("Password", text: $password)
