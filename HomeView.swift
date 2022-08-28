@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var viewModel: AuthViewModel
+
     @StateObject var weekModel: WeekViewModel = WeekViewModel()
     @Namespace var animation
     @State var text = ""
@@ -147,11 +149,18 @@ struct HomeView: View {
                     .frame(height: 100, alignment: .topTrailing)
                     .background(Color.gray.opacity(0.1))
                     
-
+                //MARK: Log Out Button
+                Button {
+                    viewModel.signOut()
+                } label: {
+                    Image("Log Out")
+                }
             }
             .padding(20)
 
         }
+        .statusBar(hidden: true)
+
     }
 }
 
